@@ -51,9 +51,9 @@ public class UserController {
 		return new ResponseEntity<User>(deletedUser,HttpStatus.ACCEPTED);
 	}
 	
-	@PutMapping("/update/{id}")
+	@PutMapping("/{id}")
 	public ResponseEntity<User> updateUserHandler(@PathVariable("id") String userId, @RequestBody User user) throws UserException{
 		User updatedUser = userService.updateUser(userId, user);
-		return new ResponseEntity<>(updatedUser,HttpStatus.ACCEPTED);
+		return new ResponseEntity<User>(updatedUser,HttpStatus.ACCEPTED);
 	}
 }
