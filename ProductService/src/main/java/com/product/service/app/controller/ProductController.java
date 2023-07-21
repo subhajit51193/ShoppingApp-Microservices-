@@ -33,26 +33,26 @@ public class ProductController {
 	}
 	
 	@GetMapping("/all")
-	public ResponseEntity<List<Product>> getAllUsersHandler() throws ProductException{
+	public ResponseEntity<List<Product>> getAllProductsHandler() throws ProductException{
 		List<Product> products = productService.getAllProducts();
 		return new ResponseEntity<List<Product>>(products,HttpStatus.ACCEPTED);
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Product> getUserByIdhandler(@PathVariable("id") String userId) throws ProductException{
-		Product foundProduct = productService.getProductById(userId);
+	public ResponseEntity<Product> getProductByIdhandler(@PathVariable("id") String productId) throws ProductException{
+		Product foundProduct = productService.getProductById(productId);
 		return new ResponseEntity<Product>(foundProduct,HttpStatus.ACCEPTED);
 	}
 	
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Product> deleteUserHandler(@PathVariable("id") String userId) throws ProductException{
-		Product product = productService.getProductById(userId);
+	public ResponseEntity<Product> deleteProductHandler(@PathVariable("id") String productId) throws ProductException{
+		Product product = productService.getProductById(productId);
 		Product deletedProduct = productService.deleteProduct(product);
 		return new ResponseEntity<Product>(deletedProduct,HttpStatus.ACCEPTED);
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Product> updateUserHandler(@PathVariable("id") String productId, @RequestBody Product product) throws ProductException{
+	public ResponseEntity<Product> updateProductHandler(@PathVariable("id") String productId, @RequestBody Product product) throws ProductException{
 		Product updatedProduct = productService.updateProduct(productId, product);
 		return new ResponseEntity<Product>(updatedProduct,HttpStatus.ACCEPTED);
 	}
