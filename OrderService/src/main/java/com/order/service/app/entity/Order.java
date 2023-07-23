@@ -1,6 +1,7 @@
 package com.order.service.app.entity;
 
-import java.util.Date;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -23,5 +24,5 @@ public class Order {
 	private String orderId;
 	private String userId;
 	private Double totalAmount;
-	private Date orderDate;
+	private LocalDateTime orderDate;
 }

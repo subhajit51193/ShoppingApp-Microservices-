@@ -24,7 +24,7 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 	
-	@PostMapping("/add")
+	@PostMapping("/create")
 	public ResponseEntity<Order> createOrderHandler(@RequestBody Order order) throws OrderException{
 		
 		Order newOrder = orderService.createOrder(order);

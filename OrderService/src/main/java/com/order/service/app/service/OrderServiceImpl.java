@@ -1,5 +1,7 @@
 package com.order.service.app.service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -27,6 +29,7 @@ public class OrderServiceImpl implements OrderService{
 		String randomOrderId = UUID.randomUUID().toString();
 		
 		order.setOrderId(randomOrderId);
+		order.setOrderDate(LocalDateTime.now());
 		Order newOrder =  orderRepository.save(order);
 		if (newOrder != null) {
 			return newOrder;
