@@ -101,7 +101,7 @@ public class BeneficiaryDetailServiceImpl implements BeneficiaryDetailService{
 			foundBeneficiaryDetail.setBeneficiaryName(beneficiaryDetail.getBeneficiaryName());
 			foundBeneficiaryDetail.setBranchName(beneficiaryDetail.getBranchName());
 			foundBeneficiaryDetail.setAccountBalance(beneficiaryDetail.getAccountBalance());
-			foundBeneficiaryDetail.setIFSC(beneficiaryDetail.getIFSC());
+			foundBeneficiaryDetail.setIfsc(beneficiaryDetail.getIfsc());
 			return beneficiaryDetailRepository.save(foundBeneficiaryDetail);
 		}
 	}
