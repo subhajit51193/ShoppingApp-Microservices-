@@ -18,7 +18,6 @@ import com.wallet.service.app.entity.Wallet;
 import com.wallet.service.app.exception.WalletException;
 import com.wallet.service.app.service.WalletService;
 
-
 @RestController
 @RequestMapping("/wallet")
 public class WalletController {

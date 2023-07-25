@@ -1,10 +1,8 @@
 package com.wallet.service.app.service;
-
 import java.util.List;
 
 import com.wallet.service.app.entity.Wallet;
 import com.wallet.service.app.exception.WalletException;
-
 
 public interface WalletService {
 

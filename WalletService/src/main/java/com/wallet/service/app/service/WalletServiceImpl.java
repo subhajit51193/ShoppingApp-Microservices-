@@ -1,5 +1,4 @@
 package com.wallet.service.app.service;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -10,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.wallet.service.app.entity.Wallet;
 import com.wallet.service.app.exception.WalletException;
 import com.wallet.service.app.repository.WalletRepository;
+
 
 @Service
 public class WalletServiceImpl implements WalletService{
@@ -100,5 +100,4 @@ public class WalletServiceImpl implements WalletService{
 			return walletRepository.save(foundWallet);
 		}
 	}
-
 }
