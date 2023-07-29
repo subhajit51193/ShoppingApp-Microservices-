@@ -18,6 +18,7 @@ public class BeneficiaryDetail {
 
 	@Id
 	private String beneficiaryDetailId;
+	private String userId;
 	private String beneficiaryName;
 	private String beneficiaryAccountNo;
 	private String ifsc;

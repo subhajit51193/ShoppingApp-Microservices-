@@ -13,6 +13,7 @@ public class BeneficiaryDetail {
 	
 	
 	private String beneficiaryDetailId;
+	private String userId;
 	private String beneficiaryName;
 	private String beneficiaryAccountNo;
 	private String IFSC;
