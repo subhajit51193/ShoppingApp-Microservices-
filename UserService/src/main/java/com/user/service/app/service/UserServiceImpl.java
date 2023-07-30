@@ -7,7 +7,9 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.user.service.app.entity.BeneficiaryDetail;
 import com.user.service.app.entity.User;
+import com.user.service.app.exception.BeneficiaryDetailException;
 import com.user.service.app.exception.UserException;
 import com.user.service.app.repository.UserRepository;
 

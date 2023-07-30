@@ -27,6 +27,9 @@ public class WalletServiceImpl implements WalletService{
 		String randomWalletId = UUID.randomUUID().toString();
 		
 		wallet.setWalletId(randomWalletId);
+		
+		
+		String userId = wallet.getUserId();
 		Wallet newWallet =  walletRepository.save(wallet);
 		if (newWallet != null) {
 			return newWallet;

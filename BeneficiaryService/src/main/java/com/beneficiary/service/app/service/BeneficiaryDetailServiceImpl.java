@@ -106,4 +106,21 @@ public class BeneficiaryDetailServiceImpl implements BeneficiaryDetailService{
 		}
 	}
 
+	/*
+	 * @return Get list of BeneficiaryDetail objects
+	 * @Param takes userId as parameter
+	 * @Exception throws BeneficiaryDetail exception if list is empty
+	 */
+	@Override
+	public List<BeneficiaryDetail> getBeneficiaryDetailsByUserId(String userId) throws BeneficiaryDetailException {
+		
+		List<BeneficiaryDetail> beneficiaryDetails = beneficiaryDetailRepository.findByUserId(userId);
+		if (beneficiaryDetails.isEmpty()) {
+			throw new BeneficiaryDetailException("Empty List");
+		}
+		else {
+			return beneficiaryDetails;
+		}
+	}
+
 }

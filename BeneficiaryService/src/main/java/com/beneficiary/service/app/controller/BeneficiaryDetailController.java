@@ -56,4 +56,10 @@ public class BeneficiaryDetailController {
 		BeneficiaryDetail updatedBeneficiaryDetail = beneficiaryDetailService.updateBeneficiaryDetail(beneficiaryDetailId, beneficiaryDetail);
 		return new ResponseEntity<BeneficiaryDetail>(updatedBeneficiaryDetail,HttpStatus.ACCEPTED);
 	}
+	
+	@GetMapping("/user/{id}")
+	public ResponseEntity<List<BeneficiaryDetail>> getBeneficiaryDetailsByUserIdHandler(@PathVariable("id") String userId) throws BeneficiaryDetailException{
+		List<BeneficiaryDetail> list = beneficiaryDetailService.getBeneficiaryDetailsByUserId(userId);
+		return new ResponseEntity<List<BeneficiaryDetail>>(list,HttpStatus.ACCEPTED);
+	}
 }

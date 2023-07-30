@@ -16,4 +16,6 @@ public interface BeneficiaryDetailService {
 	public BeneficiaryDetail deleteBeneficiaryDetail(BeneficiaryDetail beneficiaryDetail)throws BeneficiaryDetailException;
 	
 	public BeneficiaryDetail updateBeneficiaryDetail(String beneficiaryDetailId,BeneficiaryDetail beneficiaryDetail)throws BeneficiaryDetailException;
+	
+	public List<BeneficiaryDetail> getBeneficiaryDetailsByUserId(String userId)throws BeneficiaryDetailException;
 }

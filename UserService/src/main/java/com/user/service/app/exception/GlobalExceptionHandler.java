@@ -28,6 +28,19 @@ public class GlobalExceptionHandler {
 		
 	}
 	
+	@ExceptionHandler(BeneficiaryDetailException.class)
+	public ResponseEntity<MyErrorDetails> beneficiaryDetailExceptionHandler(BeneficiaryDetailException be, WebRequest req){
+		
+		
+		MyErrorDetails err= new MyErrorDetails();
+			err.setTimestamp(LocalDateTime.now());
+			err.setMessage(be.getMessage());
+			err.setDetails(req.getDescription(false));
+				
+		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.BAD_REQUEST);
+		
+	}
+	
 	
 	
 	@ExceptionHandler(Exception.class)

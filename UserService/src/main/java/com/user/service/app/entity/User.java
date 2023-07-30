@@ -41,4 +41,7 @@ public class User {
 	
 	@Transient
 	private List<Review> reviews = new ArrayList<>();
+	
+	@Transient
+	private List<BeneficiaryDetail> beneficiaryDetails =  new ArrayList<>();
 }
